@@ -13,7 +13,7 @@ namespace ConsoleApp
             {
                 connection.Connect("localhost", 5555);
                 NetworkStream stream = connection.GetStream();
-                SendCommand(stream, "power status discharging");
+                SendCommand(stream, "測試連線");
                 string command = string.Format("power capacity {0}", 50);
                 SendCommand(stream, command);
                 stream.Close();
@@ -21,7 +21,7 @@ namespace ConsoleApp
             }
             catch (Exception ex)
             {
-                Console.WriteLine("The following error has occured: {0}", ex.Message);
+                Console.WriteLine("連線失敗!: {0}", ex.Message);
             }
         }
 
