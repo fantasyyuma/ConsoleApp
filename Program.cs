@@ -13,7 +13,7 @@ namespace ConsoleApp
             {
                 connection.Connect("localhost", 5555);
                 NetworkStream stream = connection.GetStream();
-                SendCommand(stream, "測試連線");
+                SendCommand(stream, "連線成功!");
                 string command = string.Format("power capacity {0}", 50);
                 SendCommand(stream, command);
                 stream.Close();
